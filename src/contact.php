@@ -1,6 +1,6 @@
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <body>
-<?php include 'includes/nav.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <div class="container">
     <h1>Contactez-nous</h1>
     <form action="" method="POST">

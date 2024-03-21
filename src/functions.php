@@ -1,7 +1,7 @@
 <?php
 // Charge les articles du fichier JSON
 function getPosts() {
-    $jsonData = file_get_contents(__DIR__ . '/data/posts.json');
+    $jsonData = file_get_contents('../data/posts.json');
     return json_decode($jsonData, true);
 }
 
@@ -33,7 +33,7 @@ function addPost($title, $content) {
     $posts = getPosts();
     $newId = max(array_column($posts, 'id')) + 1; // Trouver l'ID le plus élevé et ajouter 1
     $posts[] = ['id' => $newId, 'title' => $title, 'content' => $content];
-    file_put_contents(__DIR__ . '/data/posts.json', json_encode($posts, JSON_PRETTY_PRINT));
+    file_put_contents('../data/posts.json', json_encode($posts, JSON_PRETTY_PRINT));
 }
 
 // Édite un article existant dans le blog
@@ -43,7 +43,7 @@ function editPost($id, $title, $content) {
         if ($post['id'] == $id) {
             $post['title'] = $title;
             $post['content'] = $content;
-            file_put_contents(__DIR__ . '/data/posts.json', json_encode($posts, JSON_PRETTY_PRINT));
+            file_put_contents('../data/posts.json', json_encode($posts, JSON_PRETTY_PRINT));
             break;
         }
     }
@@ -55,7 +55,7 @@ function deletePost($id) {
     foreach ($posts as $i => $post) {
         if ($post['id'] == $id) {
             array_splice($posts, $i, 1);
-            file_put_contents(__DIR__ . '/data/posts.json', json_encode($posts));
+            file_put_contents('../data/posts.json', json_encode($posts));
             return;
         }
     }

@@ -18,7 +18,7 @@ if (!$post) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php include 'includes/nav.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <div class="container">
     <h1>Éditer l'article</h1>
     <form action="update_post.php" method="POST">

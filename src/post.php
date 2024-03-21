@@ -5,9 +5,9 @@ if (isset($_GET['id'])) {
     $post = getPostById($_GET['id']);
 }
 ?>
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <body>
-<?php include 'includes/nav.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <div class="container">
     <?php if ($post): ?>
         <h1><?php echo $post['title']; ?></h1>

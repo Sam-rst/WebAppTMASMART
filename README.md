@@ -1,17 +1,18 @@
-# How to use linters
+# How to Use Linters
+
 ## Description
-This project is about how to use linters in our code.
-## Built With
-- PHP 8.2
+
+Ce projet vise à expliquer comment utiliser les linters dans notre code.
+
+## Pré-requis
+
+- PHP 8.2 minimum
 - Composer
-- Linters
-- 
-## Getting Started
-To get a local copy up and running follow these simple example steps.
-- Clone the project with `git clone
-- `cd` into the project directory
-- refactor the files in src folder
-- Run `composer install`
-- install phploc
-- install phpmd
-- install phpcs
+
+## Installation du projet
+
+Pour obtenir une copie locale et la faire fonctionner, suivez ces étapes simples :
+
+1. Clonez le projet avec la commande suivante :
+   ```bash
+   git clone 

@@ -1,2 +1,9 @@
 {
+    "require": {
+        "phploc/phploc": "^7.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.9",
+        "phpmd/phpmd": "^2.15"
+    }
 }

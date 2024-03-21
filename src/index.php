@@ -1,8 +1,8 @@
 <?php include 'functions.php'; ?>
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <body>
-<?php include 'includes/nav.php'; ?>
+<?php include '../includes/nav.php'; ?>
 <div class="container">
     <h1>Blog de Basketball</h1>
     <?php
