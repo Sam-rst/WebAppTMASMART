@@ -1,8 +1,8 @@
-# How to Use Linters
+# Comment utiliser des outils d'analyseurs statiques de code (Linters) et configurer une intégration continue (CI)
 
 ## Description
 
-Ce projet vise à expliquer comment utiliser les linters dans notre code. C'est un très bon moyen d'apprendre à installer et utiliser correctement des outils d'analyseurs statiques de code.
+Ce projet vise à expliquer comment utiliser les linters et configurer une intégration continue dans votre projet. C'est un très bon moyen d'apprendre à installer et utiliser correctement des outils d'analyseurs statiques de code et de pouvoir configurer des pipelines.
 
 ## Pré-requis
 
