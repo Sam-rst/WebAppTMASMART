@@ -74,3 +74,41 @@ Pour utiliser l'outil [phplcs](https://github.com/sebastianbergmann/phploc) qui 
 # Se diriger dans la racine du projet
 php ./vendor/bin/phpcs src
 ```
+
+## Mise en place d'une intégration continue avec GitHub Actions (CI)
+
+Pour créer un workflow CI, vous pouvez suivre les étapes suivantes :
+1. Créer un dossier [.github/workflows/](.github/workflows/) à la racine du projet :
+   ```bash
+   mkdir .github/workflows/
+   ```
+2. Créer un fichier [ci.yml](.github/workflows/ci.yml) dans [.github/workflows](.github/workflows) :
+   ```bash
+   cd .github/workflows/
+   touch ci.yml
+   ```
+3. Insérer le code suivant : 
+   ```yml
+   name: CI
+
+   on: [push, pull_request]
+
+   jobs:
+   build:
+      runs-on: ubuntu-latest
+   
+      steps:
+         - uses: actions/checkout@v2
+         - name: Set up PHP
+         uses: shivammathur/setup-php@v2
+         with:
+            php-version: '7.4'
+         - name: Install dependencies
+         run: composer install --prefer-dist --no-progress --no-suggest
+         - name: Run PHPMD
+         run: vendor/binphpmd src/ text cleancode,codesize
+         - name: Run PHPCS
+         run: vendor/bin/phpcs --standard=PSR12 src/
+   ```
+
+4. Le prochain push executera la pipeline
