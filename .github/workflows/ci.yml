@@ -15,6 +15,6 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: Run PHPMD
-        run: vendor/bin/phpmd src/ text cleancode,codesize
+        run: php vendor/bin/phpmd src/ text cleancode,codesize
       - name: Run PHPCS
         run: vendor/bin/phpcs --standard=PSR12 src/
