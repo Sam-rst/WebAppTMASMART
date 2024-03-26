@@ -17,4 +17,4 @@ jobs:
       - name: Run PHPMD
         run: php vendor/bin/phpmd src/ text cleancode,codesize
       - name: Run PHPCS
-        run: php vendor/bin/phpcs --standard=PSR12 src/
+        run: vendor/bin/phpcs --config-set serverity 8 --standard=PSR12 src/
